@@ -16,14 +16,14 @@ def get_file(*paths):
 
 
 def get_version():
-    init_py = get_file(os.path.dirname(__file__), 'googletrans', '__init__.py')
+    init_py = get_file(os.path.dirname(__file__), 'aiogoogletrans', '__init__.py')
     pattern = r"{0}\W*=\W*'([^']+)'".format('__version__')
     version, = re.findall(pattern, init_py)
     return version
 
 
 def get_description():
-    init_py = get_file(os.path.dirname(__file__), 'googletrans', '__init__.py')
+    init_py = get_file(os.path.dirname(__file__), 'aiogoogletrans', '__init__.py')
     pattern = r'"""(.*?)"""'
     description, = re.findall(pattern, init_py, re.DOTALL)
     return description
@@ -35,14 +35,14 @@ def get_readme():
 
 def install():
     setup(
-        name='googletrans',
+        name='aiogoogletrans',
         version=get_version(),
-        description=get_description(),
+        description_file=get_description(),
         long_description=get_readme(),
         license='MIT',
-        author='SuHun Han',
-        author_email='ssut' '@' 'ssut.me',
-        url='https://github.com/ssut/py-googletrans',
+        author='CyberAristocracy',
+        author_email='denisalbertchatgpt' '@' 'gmail.com',
+        url='https://github.com/CyberAristocracy/aiogoogletrans/tree/master',
         classifiers=['Development Status :: 5 - Production/Stable',
                      'Intended Audience :: Education',
                      'Intended Audience :: End Users/Desktop',
@@ -53,16 +53,16 @@ def install():
                      'Topic :: Education',
                      'Programming Language :: Python',
                      'Programming Language :: Python :: 3.8'],
-        packages=find_packages(exclude=['docs', 'tests']),
+        # packages=find_packages(exclude=['docs', 'tests']),
         keywords='google translate translator',
         install_requires=[
-            'httpx==0.25.0',
+            'httpx[http2]==0.25.0',
         ],
         python_requires= '>=3.6',
-        tests_require=[
-            'pytest',
-            'coveralls',
-        ],
+        # tests_require=[
+        #     'pytest',
+        #     'coveralls',
+        # ],
         scripts=['translate']
     )
 

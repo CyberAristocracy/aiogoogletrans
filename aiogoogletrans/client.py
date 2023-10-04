@@ -5,24 +5,21 @@ A Translation module.
 You can translate text using this module.
 """
 import random
-import typing
-import re
 import json
 import asyncio
 
-import httpcore
 import httpx
 from httpx import Timeout
 
-from googletrans import urls, utils
-from googletrans.gtoken import TokenAcquirer
-from googletrans.constants import (
+from aiogoogletrans import urls, utils
+from aiogoogletrans.gtoken import TokenAcquirer
+from aiogoogletrans.constants import (
     DEFAULT_CLIENT_SERVICE_URLS,
     DEFAULT_FALLBACK_SERVICE_URLS,
     DEFAULT_USER_AGENT, LANGCODES, LANGUAGES, SPECIAL_CASES,
     DEFAULT_RAISE_EXCEPTION, DUMMY_DATA
 )
-from googletrans.models import Translated, Detected, TranslatedPart
+from aiogoogletrans.models import Translated, Detected, TranslatedPart
 
 EXCLUDES = ('en', 'ca', 'fr')
 
@@ -60,7 +57,7 @@ class Translator:
 
     def __init__(self, service_urls=DEFAULT_CLIENT_SERVICE_URLS, user_agent=DEFAULT_USER_AGENT,
                  raise_exception=DEFAULT_RAISE_EXCEPTION,
-                 proxies: typing.Dict[str, httpcore.HTTPProxy] = None,
+                 proxies = None,
                  timeout: Timeout = None,
                  http2=True,
                  use_fallback=False):
@@ -461,7 +458,7 @@ class AsyncTranslator():
     def __init__(self, service_urls=DEFAULT_CLIENT_SERVICE_URLS, 
                  user_agent=DEFAULT_USER_AGENT,
                  raise_exception=DEFAULT_RAISE_EXCEPTION,
-                 proxies: typing.Dict[str, httpcore.AsyncHTTPProxy] = None,
+                 proxies = None,
                  timeout: httpx.Timeout = None,
                  http2=True,
                  use_fallback=False):
