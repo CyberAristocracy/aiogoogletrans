@@ -427,8 +427,6 @@ class Translator:
         result = Detected(lang=src, confidence=confidence, response=response)
 
         return result
-    
-
 
 class AsyncTranslator():
     """Google Translate ajax API implementation class
