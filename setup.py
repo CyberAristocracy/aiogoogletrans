@@ -52,13 +52,11 @@ def install():
                      'Operating System :: MacOS :: MacOS X',
                      'Topic :: Education',
                      'Programming Language :: Python',
-                     'Programming Language :: Python :: 3.6',
-                     'Programming Language :: Python :: 3.7',
                      'Programming Language :: Python :: 3.8'],
         packages=find_packages(exclude=['docs', 'tests']),
         keywords='google translate translator',
         install_requires=[
-            'httpx==0.13.3',
+            'httpx==0.25.0',
         ],
         python_requires= '>=3.6',
         tests_require=[
