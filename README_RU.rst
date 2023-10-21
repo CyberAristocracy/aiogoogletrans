@@ -1,18 +1,18 @@
-aiogoogletrans
+pyaiogoogletrans
 ===========
 
 [en](/README.rst) ru
 
-aiogoogletrans is a fork of [googletrans](https://github.com/ssut/py-googletrans), the difference is that bulk loading is performed asynchronously. Asynchronous translation functions have also been added.
-Based on version `4.0.0-rc1`.
+pyaiogoogletrans - является форком [googletrans](https://github.com/ssut/py-googletrans), отличие заключается в том, что массовая загрузка выполняется асихронно. А также добавлены ассихронные функции перевода. 
+Онована на версии `4.0.0-rc1`.
 
-Basic Usage
+Основное использование
 ---------
 
-For example, such an example in the usual synchronous version takes 7 seconds, when in the asynchronous version it takes 0.5 seconds.
+Например, такой пример в обычном сихронном варианте занимает 7 секунд, когда как в ассихронном 0.5 сек.
 
 ```python
-from pyaiogoogletrans import Translator
+from aiogoogletrans import Translator
 translator = Translator()
 text_list = ['안녕하세요.'] * 30
 translations = translator.translate(text_list, dest='ru')
@@ -36,7 +36,7 @@ print(text_ru.text)
 
 ```python
 import asyncio
-from pyaiogoogletrans import Translator
+from aiogoogletrans import Translator
 
 loop = asyncio.get_event_loop()
 text_ru = loop.run_until_complete(translator.async_translate('안녕하세요.', src='en', dest='ru'))
