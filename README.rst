@@ -1,46 +1,65 @@
 pyaiogoogletrans
-===========
+===============
 
-en [ru](/README_RU.rst)
+.. image:: https://img.shields.io/pypi/v/aiogoogletrans
+    :target: https://pypi.org/project/aiogoogletrans/
+    :alt: PyPI version
 
-pyaiogoogletrans - is a fork of [googletrans](https://github.com/ssut/py-googletrans), the difference is that bulk loading is performed asynchronously. Asynchronous translation functions have also been added.
+.. image:: https://img.shields.io/pypi/l/aiogoogletrans
+    :target: https://pypi.org/project/aiogoogletrans/
+    :alt: License
+
+.. image:: https://img.shields.io/pypi/pyversions/aiogoogletrans
+    :target: https://pypi.org/project/aiogoogletrans/
+    :alt: Supported Python Versions
+
+.. image:: https://img.shields.io/pypi/wheel/aiogoogletrans
+    :target: https://pypi.org/project/aiogoogletrans/
+    :alt: Wheel Support
+
+pyaiogoogletrans - is a fork of `googletrans <https://github.com/ssut/py-googletrans>`_, the difference is that bulk loading is performed asynchronously. Asynchronous translation functions have also been added.
 Based on version `4.0.0-rc1`.
 
 Main Use
----------
+--------
 
 For example, such an example in the usual synchronous version takes 7 seconds, when in the asynchronous version it takes 0.5 seconds.
 
-```python
-from aiogoogletrans import Translator
-translator = Translator()
-text_list = ['안녕하세요.'] * 30
-translations = translator.translate(text_list, dest='ru')
-for translation in translations:
-    print(translation.origin, ' -> ', translation.text)
->> 안녕하세요 -> привет.
-   안녕하세요 -> привет.
-   ...
-```
+.. code-block:: python
+
+    from aiogoogletrans import Translator
+    translator = Translator()
+    text_list = ['안녕하세요.'] * 30
+    translations = translator.translate(text_list, dest='ru')
+    for translation in translations:
+        print(translation.origin, ' -> ', translation.text)
+
+    # Output:
+    # >> 안녕하세요 -> привет.
+    #    안녕하세요 -> привет.
+    #    ...
 
 The single option is also correct:
 
-```python
-text = 'hello world'
-text_ru = translator.translate(text, src='en', dest='ru')
-print(text_ru.text)
->> Привет, мир
-```
+.. code-block:: python
+
+    text = 'hello world'
+    text_ru = translator.translate(text, src='en', dest='ru')
+    print(text_ru.text)
+
+    # Output:
+    # >> Привет, мир
 
 There is also an asynchronous version of the function:
 
-```python
-import asyncio
-from aiogoogletrans import Translator
+.. code-block:: python
 
-loop = asyncio.get_event_loop()
-text_ru = loop.run_until_complete(translator.async_translate('안녕하세요.', src='en', dest='ru'))
-print(text_ru.text)
->> Привет, мир
-```
+    import asyncio
+    from aiogoogletrans import Translator
 
+    loop = asyncio.get_event_loop()
+    text_ru = loop.run_until_complete(translator.async_translate('안녕하세요.', src='en', dest='ru'))
+    print(text_ru.text)
+
+    # Output:
+    # >> Привет, мир
