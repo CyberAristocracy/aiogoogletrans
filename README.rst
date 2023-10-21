@@ -1,6 +1,8 @@
 pyaiogoogletrans
 ===============
+
 :ref:`Russian Version </path/to/README_RU.rst>`
+...
 
 pyaiogoogletrans - is a fork of `googletrans <https://github.com/ssut/py-googletrans>`_, the difference is that bulk loading is performed asynchronously. Asynchronous translation functions have also been added.
 Based on version `4.0.0-rc1`.
