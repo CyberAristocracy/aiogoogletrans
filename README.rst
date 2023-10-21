@@ -1,21 +1,6 @@
 pyaiogoogletrans
 ===============
-
-.. image:: https://img.shields.io/pypi/v/aiogoogletrans
-    :target: https://pypi.org/project/aiogoogletrans/
-    :alt: PyPI version
-
-.. image:: https://img.shields.io/pypi/l/aiogoogletrans
-    :target: https://pypi.org/project/aiogoogletrans/
-    :alt: License
-
-.. image:: https://img.shields.io/pypi/pyversions/aiogoogletrans
-    :target: https://pypi.org/project/aiogoogletrans/
-    :alt: Supported Python Versions
-
-.. image:: https://img.shields.io/pypi/wheel/aiogoogletrans
-    :target: https://pypi.org/project/aiogoogletrans/
-    :alt: Wheel Support
+:ref:`Russian Version </path/to/README_RU.rst>`
 
 pyaiogoogletrans - is a fork of `googletrans <https://github.com/ssut/py-googletrans>`_, the difference is that bulk loading is performed asynchronously. Asynchronous translation functions have also been added.
 Based on version `4.0.0-rc1`.
