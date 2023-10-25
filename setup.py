@@ -60,7 +60,7 @@ def install():
         install_requires=[
             'httpx[http2]==0.25.0',
         ],
-        python_requires='>=3.6',
+        python_requires='>=3.8',
         # tests_require=[
         #     'pytest',
         #     'coveralls',

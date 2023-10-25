@@ -3,9 +3,8 @@ pyaiogoogletrans
 
 .. _russian-version:
 
-`Russian Version </README_RU.rst>`_
+`Russian Version <https://github.com/CyberAristocracy/pyaiogoogletrans/blob/master/README_RU.rst>`_
 
-...
 
 pyaiogoogletrans - is a fork of `googletrans <https://github.com/ssut/py-googletrans>`_, the difference is that bulk loading is performed asynchronously. Asynchronous translation functions have also been added.
 Based on version `4.0.0-rc1`.
