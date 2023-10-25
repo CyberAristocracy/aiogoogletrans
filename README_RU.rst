@@ -5,7 +5,7 @@ pyaiogoogletrans
 
    <a href="/README.rst">en</a> ru
 
-pyaiogoogletrans - это форк [googletrans](https://github.com/ssut/py-googletrans), отличающийся тем, что массовая загрузка выполняется асинхронно. Также добавлены асинхронные функции перевода. Основан на версии `4.0.0-rc1`.
+pyaiogoogletrans - это форк  `googletrans <https://github.com/ssut/py-googletrans>`_, отличающийся тем, что массовая загрузка выполняется асинхронно. Также добавлены асинхронные функции перевода. Основан на версии `4.0.0-rc1`.
 
 Основное использование
 ---------------------
