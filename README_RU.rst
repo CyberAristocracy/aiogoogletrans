@@ -3,7 +3,7 @@ pyaiogoogletrans
 
 .. raw:: html
 
-   <a href="/README.rst">en</a> ru
+   <a href="/README.rst">Английская версия</a>
 
 pyaiogoogletrans - это форк  `googletrans <https://github.com/ssut/py-googletrans>`_, отличающийся тем, что массовая загрузка выполняется асинхронно. Также добавлены асинхронные функции перевода. Основан на версии `4.0.0-rc1`.
 
